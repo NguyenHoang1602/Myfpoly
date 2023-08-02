@@ -4,6 +4,7 @@ import com.example.asm_nguyenhnpk02250.Model.NotificationAction;
 import com.example.asm_nguyenhnpk02250.Model.NotificationStudy;
 import com.example.asm_nguyenhnpk02250.Model.NotificationTuition;
 import com.example.asm_nguyenhnpk02250.Model.Product;
+import com.example.asm_nguyenhnpk02250.Model.Schedules;
 import com.example.asm_nguyenhnpk02250.Model.User;
 
 import java.util.ArrayList;
@@ -22,5 +23,7 @@ public interface APIService {
     Call<ArrayList<NotificationAction>> getNotificationAction();
     @GET("GetNotificationTuition.php")
     Call<ArrayList<NotificationTuition>> getNotificationTuition();
+    @GET("GetSchedule.php")
+    Call<ArrayList<Schedules>> getSchedule();
 
 }

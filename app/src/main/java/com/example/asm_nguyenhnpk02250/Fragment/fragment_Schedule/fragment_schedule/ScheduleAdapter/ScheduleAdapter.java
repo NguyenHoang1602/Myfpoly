@@ -4,12 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.asm_nguyenhnpk02250.Model.NotificationStudy;
 import com.example.asm_nguyenhnpk02250.Model.Schedule;
+import com.example.asm_nguyenhnpk02250.Model.Schedules;
 import com.example.asm_nguyenhnpk02250.R;
 
 import java.util.ArrayList;
@@ -17,9 +20,9 @@ import java.util.ArrayList;
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.NotificationViewHolder>{
 
     private Context context;
-    private ArrayList<Schedule> list;
+    private ArrayList<Schedules> list;
 
-    public ScheduleAdapter(Context context, ArrayList<Schedule> list) {
+    public ScheduleAdapter(Context context, ArrayList<Schedules> list) {
         this.context = context;
         this.list = list;
     }
@@ -33,12 +36,14 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Notifi
 
     @Override
     public void onBindViewHolder(@NonNull NotificationViewHolder holder, int position) {
-        holder.tv_subject.setText(list.get(position).getSubject_ID());
-        holder.tv_room.setText(list.get(position).getRoom_ID());
-        holder.tv_time.setText(list.get(position).getSlot());
-        holder.tv_amphitheater.setText(list.get(position).getAmphitheater_ID());
-        holder.tv_date.setText(list.get(position).getDate());
-        holder.tv_lecturers.setText(list.get(position).getLecturers_ID());
+
+        final Schedules schedules = list.get(position);
+        holder.tv_subject.setText(schedules.getName());
+        holder.tv_room.setText(schedules.getRoom_Name());
+        holder.tv_time.setText(schedules.getTime());
+        holder.tv_amphitheater.setText(schedules.getAmphitheater_Name());
+        holder.tv_date.setText(schedules.getDate());
+        holder.tv_lecturers.setText(schedules.getLecturers_ID());
 
     }
 
@@ -50,6 +55,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Notifi
     public class NotificationViewHolder extends RecyclerView.ViewHolder{
 
         TextView tv_subject, tv_room, tv_time, tv_amphitheater, tv_date, tv_lecturers;
+        LinearLayout layout_item;
 
         public NotificationViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,6 +65,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Notifi
             tv_amphitheater = itemView.findViewById(R.id.tv_Amphitheater);
             tv_date = itemView.findViewById(R.id.tv_date);
             tv_lecturers = itemView.findViewById(R.id.tv_Lecturers);
+            layout_item = itemView.findViewById(R.id.tab_layout_Schedule);
 
         }
     }
