@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">myFpoly</string>
+    <string name="user_name">Enter your name</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="Email">Enter Your Email</string>
+    <string name="contact">Contact number</string>
+    <string name="pass">Enter your Password</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="Register">Register</string>
+    <string name="txtRegister"> Register</string>
+    <string name="reset_pass">Forgot password ? </string>
+    <string name="new_register">Do you have Account ?</string>
+    <string name="txtlogin">You have Account ?</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="KTKL">Khen thưởng/Kỷ luật</string>
+    <string name="SMS">SMS</string>
+    <string name="Home">Trang chủ</string>
+    <string name="question">Câu hỏi thường gặp</string>
+    <string name="personal">Thông tin cá nhân</string>
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item android:id="@+id/nav_home"
+            android:title="@string/Home"
+            android:icon="@drawable/baseline_home_24"/>
+        <item android:id="@+id/nav_ttcn"
+            android:title="@string/personal"
+            android:icon="@drawable/baseline_person_24"/>
+        <item android:id="@+id/nav_ktkl"
+            android:title="@string/KTKL"
+            android:icon="@drawable/baseline_favorite_24"/>
+        <item android:id="@+id/nav_sms"
+            android:title="@string/SMS"
+            android:icon="@drawable/baseline_sms_24"/>
+        <item android:id="@+id/nav_question"
+            android:title="@string/question"
+            android:icon="@drawable/baseline_help_outline_24"/>
+
+    <item android:title="Cài đặt">
+        <menu>
+            <item android:id="@+id/nav_translater"
+                android:title="@string/language"
+                android:icon="@drawable/baseline_g_translate_24"/>
+            <item android:id="@+id/nav_logout"
+                android:title="@string/logout"
+                android:icon="@drawable/baseline_logout_24"/>
+
+        </menu>
+    </item>
+</menu>

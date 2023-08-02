@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/button_Home"
+        android:title="Trang Chủ"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:id="@+id/button_Schedule"
+        android:title="Lịch Học"
+        android:icon="@drawable/baseline_calendar_month_24"/>
+    <item android:id="@+id/button_Score"
+        android:title="Tin Tức"
+        android:icon="@drawable/baseline_class_24"/>
+    <item android:id="@+id/button_Utilities"
+        android:title="Tiện Ích"
+        android:icon="@drawable/baseline_apps_24"/>
+</menu>
