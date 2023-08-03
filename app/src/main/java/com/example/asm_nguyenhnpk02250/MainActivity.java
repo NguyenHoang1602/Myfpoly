@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialToolbar toolbar = findViewById(R.id.Appbar_layout);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Home");
+        getSupportActionBar().setTitle("Trang chủ");
 
         toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,19 +93,19 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 if(id == R.id.button_Home){
                     openHomeFragment();
-                    getSupportActionBar().setTitle("Home");
+                    getSupportActionBar().setTitle("Trang chủ");
                     //navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
                 }else if(id == R.id.button_Schedule){
                     openScheduleFragment();
-                    getSupportActionBar().setTitle("Schedule");
+                    getSupportActionBar().setTitle("Lịch học");
                     //navigationView.getMenu().findItem(R.id.nav_favorite).setChecked(true);
                 }else if(id == R.id.button_Score){
                     openScoreFragment();
-                    getSupportActionBar().setTitle("Score");
+                    getSupportActionBar().setTitle("Tin tức");
                     //navigationView.getMenu().findItem(R.id.nav_favorite).setChecked(true);
                 }else if(id == R.id.button_Utilities){
                     openUtilitiesFragment();
-                    getSupportActionBar().setTitle("Utilities");
+                    getSupportActionBar().setTitle("Tiện ích");
                     //navigationView.getMenu().findItem(R.id.nav_favorite).setChecked(true);
                 }
                 return true;
@@ -120,25 +120,25 @@ public class MainActivity extends AppCompatActivity {
                         mCurrentFragment = FRAGMENT_HOME;
                         //navigationView.getMenu().findItem(R.id.nav_table).setChecked(true);
                         mbottomNavigationView.getMenu().findItem(R.id.button_Home).setChecked(true);
-                        getSupportActionBar().setTitle("Home");
+                        getSupportActionBar().setTitle("Trang chủ");
                         break;
                     case 1:
                         mCurrentFragment = FRAGMENT_HOME;
                         //navigationView.getMenu().findItem(R.id.nav_menu).setChecked(true);
                         mbottomNavigationView.getMenu().findItem(R.id.button_Schedule).setChecked(true);
-                        getSupportActionBar().setTitle("Schedule");
+                        getSupportActionBar().setTitle("Lịch học");
                         break;
                     case 2:
                         mCurrentFragment = FRAGMENT_HOME;
                         //navigationView.getMenu().findItem(R.id.nav_pay).setChecked(true);
                         mbottomNavigationView.getMenu().findItem(R.id.button_Score).setChecked(true);
-                        getSupportActionBar().setTitle("Score");
+                        getSupportActionBar().setTitle("Tin tức");
                         break;
                     case 3:
                         mCurrentFragment = FRAGMENT_HOME;
                         //navigationView.getMenu().findItem(R.id.nav_user).setChecked(true);
                         mbottomNavigationView.getMenu().findItem(R.id.button_Utilities).setChecked(true);
-                        getSupportActionBar().setTitle("Utilities");
+                        getSupportActionBar().setTitle("Tiện ích");
                         break;
                 }
 
