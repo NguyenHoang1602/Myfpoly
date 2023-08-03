@@ -89,7 +89,7 @@ public class fragment_schedule extends Fragment {
                     }
                 }
                 if (list == null || list.isEmpty()){
-                    Toast.makeText(mainActivity, "Bạn không có lịch học trong thời gian tới ",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Bạn không có lịch học trong thời gian tới ",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 //Toast.makeText(mainActivity, "listschedule : " + list.size(),Toast.LENGTH_SHORT).show();

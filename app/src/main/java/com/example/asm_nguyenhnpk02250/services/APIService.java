@@ -1,5 +1,6 @@
 package com.example.asm_nguyenhnpk02250.services;
 
+import com.example.asm_nguyenhnpk02250.Model.News;
 import com.example.asm_nguyenhnpk02250.Model.NotificationAction;
 import com.example.asm_nguyenhnpk02250.Model.NotificationStudy;
 import com.example.asm_nguyenhnpk02250.Model.NotificationTuition;
@@ -28,6 +29,8 @@ public interface APIService {
     Call<ArrayList<Schedules>> getSchedule();
     @GET("GetTestSchedule.php")
     Call<ArrayList<TestSchedules>> getTestSchedule();
+    @GET("GetNews.php")
+    Call<ArrayList<News>> getNews();
 
 
 }

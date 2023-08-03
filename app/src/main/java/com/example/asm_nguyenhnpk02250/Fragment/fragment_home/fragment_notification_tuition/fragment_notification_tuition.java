@@ -55,7 +55,8 @@ public class fragment_notification_tuition extends Fragment {
             public void onResponse(Call<ArrayList<NotificationTuition>> call, Response<ArrayList<NotificationTuition>> response) {
                 list = response.body();
                 if(list == null || list.isEmpty()){
-                    Toast.makeText(mainActivity, "Khong co thong bao hoc phi",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(mainActivity, "Khong co thong bao hoc phi",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Khong co thong bao hoc phi",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
