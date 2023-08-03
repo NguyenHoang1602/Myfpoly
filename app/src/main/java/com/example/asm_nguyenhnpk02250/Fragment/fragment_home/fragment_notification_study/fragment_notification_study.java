@@ -39,6 +39,7 @@ public class fragment_notification_study extends Fragment {
         View view = inflater.inflate(R.layout.layout_fragment_notification_study, container, false);
         rcv_notification_study = view.findViewById(R.id.rcv_notification_study);
         linearLayout = view.findViewById(R.id.linearNotification);
+        notificationStudies = new ArrayList<>();
         getdata();
         return view;
 
@@ -56,6 +57,10 @@ public class fragment_notification_study extends Fragment {
             @Override
             public void onResponse(Call<ArrayList<NotificationStudy>> call, Response<ArrayList<NotificationStudy>> response) {
                 notificationStudies = response.body();
+                if(notificationStudies == null || notificationStudies.isEmpty()){
+                    Toast.makeText(mainActivity, "Khong co thong bao hoc phi",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
                 rcv_notification_study.setLayoutManager(linearLayoutManager);
                 homeAdapter = new HomeAdapter(getContext(),notificationStudies);

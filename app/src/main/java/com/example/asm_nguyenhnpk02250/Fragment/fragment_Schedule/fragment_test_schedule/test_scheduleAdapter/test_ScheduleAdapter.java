@@ -10,16 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.asm_nguyenhnpk02250.Model.Schedule;
+import com.example.asm_nguyenhnpk02250.Model.Schedules;
+import com.example.asm_nguyenhnpk02250.Model.TestSchedules;
 import com.example.asm_nguyenhnpk02250.R;
 
 import java.util.ArrayList;
 
 public class test_ScheduleAdapter extends RecyclerView.Adapter<test_ScheduleAdapter.NotificationViewHolder>{
 
+    private final ArrayList<TestSchedules> list;
     private Context context;
-    private ArrayList<Schedule> list;
 
-    public test_ScheduleAdapter(Context context, ArrayList<Schedule> list) {
+    public test_ScheduleAdapter(Context context, ArrayList<TestSchedules> list) {
         this.context = context;
         this.list = list;
     }
@@ -33,12 +35,14 @@ public class test_ScheduleAdapter extends RecyclerView.Adapter<test_ScheduleAdap
 
     @Override
     public void onBindViewHolder(@NonNull NotificationViewHolder holder, int position) {
-        holder.tv_subject.setText(list.get(position).getSubject_ID());
-        holder.tv_room.setText(list.get(position).getRoom_ID());
-        holder.tv_time.setText(list.get(position).getSlot());
-        holder.tv_amphitheater.setText(list.get(position).getAmphitheater_ID());
-        holder.tv_date.setText(list.get(position).getDate());
-        holder.tv_lecturers.setText(list.get(position).getLecturers_ID());
+        final TestSchedules testSchedules = list.get(position);
+        holder.tv_subject.setText(testSchedules.getName());
+        holder.tv_room.setText(testSchedules.getRoom_Name());
+        holder.tv_time.setText(testSchedules.getTime());
+        holder.tv_amphitheater.setText(testSchedules.getAmphitheater_Name());
+        holder.tv_date.setText(testSchedules.getDate());
+        holder.tv_lecturers.setText(testSchedules.getLecturers_ID());
+        holder.tv_subject_ID.setText(testSchedules.getSubject_ID());
 
     }
 
@@ -49,7 +53,7 @@ public class test_ScheduleAdapter extends RecyclerView.Adapter<test_ScheduleAdap
 
     public class NotificationViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tv_subject, tv_room, tv_time, tv_amphitheater, tv_date, tv_lecturers;
+        TextView tv_subject, tv_room, tv_time, tv_amphitheater, tv_date, tv_lecturers,tv_subject_ID;
 
         public NotificationViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,6 +63,7 @@ public class test_ScheduleAdapter extends RecyclerView.Adapter<test_ScheduleAdap
             tv_amphitheater = itemView.findViewById(R.id.tv_Amphitheater);
             tv_date = itemView.findViewById(R.id.tv_date);
             tv_lecturers = itemView.findViewById(R.id.tv_Lecturers);
+            tv_subject_ID = itemView.findViewById(R.id.tv_Subject_ID);
 
         }
     }

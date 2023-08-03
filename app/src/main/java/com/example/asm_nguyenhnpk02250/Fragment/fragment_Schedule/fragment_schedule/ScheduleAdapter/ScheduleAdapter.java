@@ -44,6 +44,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Notifi
         holder.tv_amphitheater.setText(schedules.getAmphitheater_Name());
         holder.tv_date.setText(schedules.getDate());
         holder.tv_lecturers.setText(schedules.getLecturers_ID());
+        holder.tv_subject_ID.setText(schedules.getSubject_ID());
 
     }
 
@@ -54,7 +55,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Notifi
 
     public class NotificationViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tv_subject, tv_room, tv_time, tv_amphitheater, tv_date, tv_lecturers;
+        TextView tv_subject, tv_room, tv_time, tv_amphitheater, tv_date, tv_lecturers,tv_subject_ID;
         LinearLayout layout_item;
 
         public NotificationViewHolder(@NonNull View itemView) {
@@ -66,6 +67,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Notifi
             tv_date = itemView.findViewById(R.id.tv_date);
             tv_lecturers = itemView.findViewById(R.id.tv_Lecturers);
             layout_item = itemView.findViewById(R.id.tab_layout_Schedule);
+            tv_subject_ID = itemView.findViewById(R.id.tv_Subject_ID);
 
         }
     }

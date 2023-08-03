@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private MyViewPagerAdapter mViewPagerAdapter;
     private ViewPager2 mViewpager2;
     private TextView tv_name, tv_email;
+    public User user;
 
 
     @Override
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         bottomclick();
         Bundle bundleReceive = getIntent().getExtras();
         if(bundleReceive != null ){
-            User user = (User) bundleReceive.get("Object_User");
+            user = (User) bundleReceive.get("Object_User");
             if(user != null){
                 tv_name.setText(user.getName());
                 tv_email.setText(user.getMSSV());

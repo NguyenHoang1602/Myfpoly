@@ -37,6 +37,7 @@ public class fragment_notification_tuition extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_fragment_notification_tuitions, container, false);
         rcv_notification_study = view.findViewById(R.id.rcv_notification_tuitions);
+        list = new ArrayList<>();
         getdata();
         return view;
     }
@@ -53,13 +54,14 @@ public class fragment_notification_tuition extends Fragment {
             @Override
             public void onResponse(Call<ArrayList<NotificationTuition>> call, Response<ArrayList<NotificationTuition>> response) {
                 list = response.body();
+                if(list == null || list.isEmpty()){
+                    Toast.makeText(mainActivity, "Khong co thong bao hoc phi",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
                 rcv_notification_study.setLayoutManager(linearLayoutManager);
                 tuitionAdapter = new TuitionAdapter(getContext(),list);
                 rcv_notification_study.setAdapter(tuitionAdapter);
-                if(list == null){
-
-                }
                 //Toast.makeText(LoginScreen.this, "" + list.size(),Toast.LENGTH_SHORT).show();
             }
 
