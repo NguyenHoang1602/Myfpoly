@@ -16,7 +16,7 @@ import retrofit2.http.GET;
 
 public interface APIService {
 
-    String base_link = "http://192.168.1.12/MYFPOLY_DATABASE/API/";
+    String base_link = "http://192.168.1.8/MYFPOLY_DATABASE/API/";
     @GET("GetUser.php")
     Call<ArrayList<User>> getUser();
     @GET("GetNofiticationStudy.php")

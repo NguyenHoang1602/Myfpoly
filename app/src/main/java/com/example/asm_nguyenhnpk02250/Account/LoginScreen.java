@@ -138,7 +138,7 @@ public class LoginScreen extends AppCompatActivity {
 
         }else {
             progressDialog.dismiss();
-            Toast.makeText(LoginScreen.this, "Email hoac mat khau khong dung !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginScreen.this, "Email hoặc mật khẩu không đúng !", Toast.LENGTH_SHORT).show();
         }
 
     }

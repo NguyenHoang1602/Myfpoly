@@ -107,7 +107,12 @@ public class MainActivity extends AppCompatActivity {
                     openUtilitiesFragment();
                     getSupportActionBar().setTitle("Tiện ích");
                     //navigationView.getMenu().findItem(R.id.nav_favorite).setChecked(true);
+                }else if(id == R.id.button_Home){
+                    openHomeFragment();
+                    getSupportActionBar().setTitle("Trang chủ");
+                    //navigationView.getMenu().findItem(R.id.nav_favorite).setChecked(true);
                 }
+
                 return true;
             }
         });
